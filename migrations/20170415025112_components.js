@@ -1,7 +1,7 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('components', function(t) {
         t.increments('id').unsigned().primary().notNull();
-        t.timestamps();
+        t.timestamps(true,true);
         t.integer('user_id').references('components.id').notNull().onDelete('cascade');
         t.string('title').notNull();
         t.string('data').notNull();
