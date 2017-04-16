@@ -5,7 +5,7 @@ exports.up = function(knex, Promise) {
         t.integer('user_id').references('components.id').notNull().onDelete('cascade');
         t.string('title').notNull();
         t.string('data').notNull();
-        t.string('project_id').notNull().onDelete('cascade');
+        t.integer('project_id').references('projects.id').notNull().onDelete('cascade');
     });
 };
 
