@@ -2,7 +2,9 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTable('users', function(t) {
         t.increments('id').unsigned().primary().notNull();
         t.timestamps(true,true);
-        t.string('username',20).notNull().unique();
+        t.string('firstname',20).notNull();
+        t.string('lastname',20).notNull();
+        t.string('company',20)
         t.string('email').notNull().unique();
         t.string('password_hash').notNull();
     });
