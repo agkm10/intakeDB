@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         t.timestamps(true,true);
         t.integer('user_id').references('users.id').notNull().onDelete('cascade');
         t.string('message').notNull();
+        t.string('type').notNull();
     });
 };
 
