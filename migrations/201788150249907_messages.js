@@ -6,7 +6,7 @@ exports.up = function(knex, Promise) {
         t.integer('user_id').references('users.id').notNull().onDelete('cascade');
         t.string('message').notNull();
         t.string('type').notNull();
-        t.boolean('read').notNull();
+        t.boolean('read').notNull().defaultTo(false);
     })
     .then(function(){
         return knex('messages').insert([
@@ -27,7 +27,7 @@ exports.up = function(knex, Promise) {
             {chat_id:2,user_id:2,message:'you know what you are right',type:'admin',read:false},
             {chat_id:2,user_id:2,message:'ill just make her dinner',type:'admin',read:false}
         ])
-    }) 
+    })
 };
 
 exports.down = function(knex, Promise) {

@@ -10,14 +10,20 @@ exports.up = function(knex, Promise) {
     })
     .then(function(){
         return knex('components').insert([
-            {user_id:1,compName:"TestComp1",statusName:"TooltipA", completed:true, project_id:1},
+            {user_id:1,compName:"SocialInputs",statusName:"SocialInputs", completed:true, project_id:1},
             {user_id:1,compName:"TestComp2",statusName:"TooltipB", completed:false, project_id:1},
-            {user_id:1,compName:"TestComp3",statusName:"TooltipC", completed:true, project_id:1},
-            {user_id:1,compName:"TestComp4",statusName:"TooltipD", completed:false, project_id:1},
-            {user_id:2,compName:"TestComp1",statusName:"TooltipA", completed:true, project_id:2},
+            {user_id:1,compName:"BillInfo",statusName:"BillInfo", completed:true, project_id:1},
+            {user_id:1,compName:"WebPages",statusName:"WebPages", completed:false, project_id:1},
+            {user_id:1,compName:"LogoUpload",statusName:"LogoUpload", completed:false, project_id:1},
+            {user_id:1,compName:"BizInfo",statusName:"BizInfo", completed:false, project_id:1},
+            {user_id:1,compName:"Design",statusName:"Design", completed:false, project_id:1},
+            {user_id:2,compName:"SocialInputs",statusName:"SocialInputs", completed:true, project_id:2},
             {user_id:2,compName:"TestComp2",statusName:"TooltipB", completed:false, project_id:2},
-            {user_id:2,compName:"TestComp3",statusName:"TooltipC", completed:true, project_id:2},
-            {user_id:2,compName:"TestComp4",statusName:"TooltipD", completed:false, project_id:2}
+            {user_id:2,compName:"BillInfo",statusName:"BillInfo", completed:true, project_id:2},
+            {user_id:2,compName:"WebPages",statusName:"WebPages", completed:false, project_id:2},
+            {user_id:2,compName:"LogoUpload",statusName:"LogoUpload", completed:false, project_id:2},
+            {user_id:2,compName:"BizInfo",statusName:"BizInfo", completed:false, project_id:2},
+            {user_id:2,compName:"Design",statusName:"Design", completed:false, project_id:2}
         ])
     })
 };
