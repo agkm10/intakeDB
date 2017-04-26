@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
         t.increments('id').unsigned().primary().notNull();
         t.integer('user_id').references('users.id').notNull().onDelete('cascade');
         t.timestamps(true,true);
+        t.json('websites');
         t.string('billingpoc');
         t.string('billingphonenumber');
         t.string('billingemail');
