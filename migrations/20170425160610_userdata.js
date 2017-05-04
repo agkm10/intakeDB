@@ -34,7 +34,8 @@ exports.up = ( knex, Promise ) => {
     .then( () => {
         return knex( "userdata" ).insert( [
             { user_id: 1 },
-            { user_id: 2 }
+            { user_id: 2 },
+            { user_id: 3 }
         ])
     })
 };
