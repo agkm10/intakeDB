@@ -8,7 +8,8 @@ exports.up = function(knex, Promise) {
     .then(function(){
         return knex("projects").insert([
             {user_id: 1},
-            {user_id: 2}
+            {user_id: 2},
+            {user_id: 3}
         ])
     })
 };

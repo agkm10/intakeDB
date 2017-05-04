@@ -10,7 +10,7 @@ exports.up = function(knex, Promise) {
     })
     .then(function (){
         return knex("admins").insert([
-            { firstname: "admin1fn", lastname: "admin1ln", company: "admin1comp", email: "1@1.com", password_hash: "$2a$10$uCBSFHeYHgEBDbS/Cf9guOCmzkzt6ujnBqc5s9TzU0DYVRw.vLc0a"},
+            { firstname: "Mr", lastname: "Watson", company: "intakeAI", email: "1@1.com", password_hash: "$2a$10$uCBSFHeYHgEBDbS/Cf9guOCmzkzt6ujnBqc5s9TzU0DYVRw.vLc0a"},
             { firstname: "admin2fn", lastname: "admin2ln", company: "admin2comp", email: "2@2.com", password_hash: "$2a$10$uCBSFHeYHgEBDbS/Cf9guOCmzkzt6ujnBqc5s9TzU0DYVRw.vLc0a"}
         ])
     })
